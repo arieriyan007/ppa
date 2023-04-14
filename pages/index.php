@@ -141,9 +141,77 @@ include "header.php";
 
                                                <a href="assesmen.php?id=<?= $idk; ?>" class="btn btn-info btn-sm my-2" type="submit" title="Data Rekam Medis Pasien"><i class="fas fa-file-medical-alt"></i> Assesment</a>
 
+                                               <!-- edit modal -->
+                                               <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#edit<?= $idk; ?>" title="Edit Data Karyawan">
+                                                <i class="fas fa-edit"></i> Edit
+                                                </button>
+
+                                                <!-- The Modal -->
+                                                <div class="modal fade" id="edit<?= $idk; ?>">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Edit Data <?= $dk['nama']; ?></h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <form action="indexUpdate.php" method="POST">
+                                                    <div class="modal-body">
+
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input type="text" name="nik" class="form-control my-2" value="<?= $nik; ?>">
+                                                        <label for="inputNik"><strong>NIK Karyawan</strong></label>
+                                                    </div>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input type="text" name="nama" class="form-control my-2" value="<?= $nama; ?>">
+                                                        <label for="inputNama"><strong>Nama Karyawan</strong></label>
+                                                    </div>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input type="date" name="tglllahir" class="form-control my-2" value="<?= $tgllahir; ?>">
+                                                        <label for="inputTgllahir"><strong>Tgl Lahir</strong></label>
+                                                    </div>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <select name="jk" id="jk" class="form-control my-2">
+                                                            <option selected><?= $dk['jk']; ?></option>
+                                                            <option value="Laki-Laki">Laki-Laki</option>
+                                                            <option value="Perempuan">Perempuan</option>
+                                                        </select>
+                                                        <label for="inputJk"><strong>Jenis Kelamin</strong></label>
+                                                    </div>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input type="date" name="tglinput" class="form-control my-2" value="<?= $tglinput; ?>">
+                                                        <label for="inputTglinput"><strong>Tgl Input</strong></label>
+                                                    </div>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input type="text" name="jabatan" class="form-control my-2" value="<?= $jabatan; ?>">
+                                                        <label for="inputJabatan"><strong>Jabatan</strong></label>
+                                                    </div>
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input type="text" name="dept" class="form-control my-2" value="<?= $dept; ?>">
+                                                        <label for="inputDept"><strong>Departemen</strong></label>
+                                                    </div>
+
+                                                    </div>
+
+                                                    <!-- Modal footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" name="udpate"><i class="fas fa-user-edit"></i> Update</button>
+                                                    </div>
+                                                    </form>
+
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <!-- akhit edit modal -->
+
                                                <a href="hapus.php<?= $idk; ?>" class="btn btn-danger btn-sm my-1" title="Hapus Data Karyawan"><i class="fas fa-trash"></i> Hapus</a>
+
+
                                             </td>
-                                            <td><a href="cekllist.php<?= $idk; ?>" class="btn btn-secondary btn-sm my-2" ><i class="far fa-file-pdf"></i> ceklist PDF</a></td>
+                                            <td><a href="cekllist.php<?= $idk; ?>" class="btn btn-secondary btn-sm my-2" title="Cetak Ceklist PDF"><i class="far fa-file-pdf"></i> ceklist PDF</a></td>
                                         </tr>
 
                                         <?php 
