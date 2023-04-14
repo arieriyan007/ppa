@@ -158,7 +158,7 @@ include "header.php";
                                                     </div>
 
                                                     <!-- Modal body -->
-                                                    <form action="indexUpdate.php" method="POST">
+                                                    <form action="updateIndex.php" method="POST">
                                                     <div class="modal-body">
 
                                                     <div class="form-floating mb-3 mb-md-0">
