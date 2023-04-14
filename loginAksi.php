@@ -10,8 +10,7 @@ if (isset($_POST['submit'])) {
 
     // cek/hitung jumlah data yang masuk atau login jika bernilai 1 maka login, jika bernilai 0 makatidak bisa login
     $hitung = mysqli_fetch_array($ceklogin);
-    if ($hitung > 0) {
-        
+    if ($hitung > 0) { 
         // panggil session agar bisa membuat log akses
         $_SESSION['log']    = 'True';
         // Session berikut sebagai menampilkan nama user login
