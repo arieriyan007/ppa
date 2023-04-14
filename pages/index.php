@@ -1,0 +1,162 @@
+<?php 
+include "header.php";
+?>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Halaman Utama</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                        
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah" title="Tambah data karyawan">
+                                <i class="fas fa-plus"></i> Data Karyawan</button>
+
+                                <!-- The Modal -->
+                                <div class="modal fade" id="tambah">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Tambah data karyawan</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <form action="dataKaryawan.php" method="POST">
+                                    <div class="modal-body">
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="text" name="nik" class="form-control my-2" required placeholder="NIK Karyawan">
+                                                <label for="inputNik">NIK Karyawan</label>
+                                            </div>
+                                        
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="text" name="nama" class="form-control" placeholder="Nama Karyawan" autofocus required>
+                                                <label for="inputNama">Nama Karyawan</label>
+                                            </div>
+                                        
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="date" name="tgllahir" class="form-control my-2" placeholder="Tanggal Lahir" required>
+                                                <label for="inputTgllahir">Tgl Lahir</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <select name="jk" id="jk" class="form-control my-2">
+                                                    <option value="">- pilih jenis kelamin -</option>
+                                                    <option value="Laki-Laki">Laki-Laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
+                                                </select>
+                                                <label for="inputJeniskelamin">Jenis Kelamin</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="date" name="tglinput" class="form-control my-2" placeholder="Tanggal Input">
+                                                <label for="inputTglinput">Tgl Input</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="text" name="tmptmcu" class="form-control my-2" placeholder="Tempat MCU" required>
+                                                <label for="inputTmptmcu">Tempat MCU</label>
+                                            </div>
+
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="text" name="jabatan" class="form-control my-2" placeholder="Jabatan" required>
+                                                <label for="inputJabatan">Jabatan Karyawan</label>
+                                            </div>
+                                            
+                                            <div class="form-floating mb-3 mb-md-0">
+                                                <input type="text" name="dept" class="form-control my-2" placeholder="Departemen" required>
+                                                <label for="inputDept">Departemen</label>
+                                            </div>
+
+                                            <button class="btn btn-primary" name="simpan" type="submit">Simpan</button>
+                                    </div>
+                                    
+                                    </form>
+
+                                    </div>
+                                </div>
+                                </div>    
+                            
+                            </div>
+                            <div class="card-body">
+                                
+                                <table id="datatablesSimple" class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>NIK</th>
+                                            <th>Nama</th>
+                                            <th>Umur</th>
+                                            <th>JK</th>
+                                            <th>Tgl Input</th>
+                                            <th>Tempat MCU</th>
+                                            <th>Jabatan</th>
+                                            <th>Departemen</th>
+                                            <th>Aksi</th>
+                                            <th>Ceklist PDF</th>
+                                            
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <?php
+                                    
+                                    $datakaryawan = mysqli_query($koneksi, "SELECT * FROM karyawan");
+                                    while ($dk = mysqli_fetch_array($datakaryawan)) {
+                                        $idk        = $dk['idkaryawan'];
+                                        $nik        = $dk['nik'];
+                                        $nama       = $dk['nama'];
+                                        $tgllahir   = $dk['tgl_lahir'];
+                                        $jk         = $dk['jk'];
+                                        $tglinput   = $dk['tgl_input'];
+                                        $tmptmcu    = $dk['mcu'];
+                                        $jabatan    = $dk['jabatan'];
+                                        $dept       = $dk['dept'];
+                                           
+                                    ?>
+
+                                        <tr class="text-center">
+                                            <td><?= $nik; ?></td>
+                                            <td><?= $nama; ?></td>
+                                            <td>
+                                                <?php 
+                                                $lahir = new DateTime($dk['tgl_lahir']);
+                                                $today = new DateTime();
+                                                $umur  = $today->diff($lahir);
+
+                                                echo $umur->y; echo " Tahun, "; echo $umur->m; echo " Bulan, "; echo $umur->d; echo " Hari ";
+                                                 ?>
+                                            </td>
+                                            <td><?= $jk; ?></td>
+                                            <td><?= $tglinput; ?></td>
+                                            <td><?= $tmptmcu; ?></td>
+                                            <td><?= $jabatan; ?></td>
+                                            <td><?= $dept; ?></td>
+                                            <td>
+                                                <input type="hidden" name="idkaryawannya" value="<?= $idk; ?>">
+
+                                               <a href="assesmen.php?id=<?= $idk; ?>" class="btn btn-info btn-sm my-2" type="submit" title="Data Rekam Medis Pasien"><i class="fas fa-file-medical-alt"></i> Assesment</a>
+
+                                               <a href="hapus.php<?= $idk; ?>" class="btn btn-danger btn-sm my-1" title="Hapus Data Karyawan"><i class="fas fa-trash"></i> Hapus</a>
+                                            </td>
+                                            <td><a href="cekllist.php<?= $idk; ?>" class="btn btn-secondary btn-sm my-2" ><i class="far fa-file-pdf"></i> ceklist PDF</a></td>
+                                        </tr>
+
+                                        <?php 
+                                    }
+                                    ?>
+                                    </tbody>
+                                    
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </main>               
+<?php 
+include "footer.php";
+?>
