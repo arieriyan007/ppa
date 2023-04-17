@@ -68,7 +68,7 @@ include "header.php";
                                             ?>
                                             <form action="" method="POSt">
                                                 <div class="card">
-                                                    <h5 class="card-header">Keadaan Fisik</h5>
+                                                    <h5 class="card-header"><i class="fas fa-file-medical"></i> Keadaan Fisik</h5>
                                                         <div class="card-body">
                                                             <div class="row mb-3">
                                                                 <div class="col-md-4">
@@ -80,7 +80,7 @@ include "header.php";
 
                                                                 <div class="col-md-2">
                                                                     <div class="form-floating mb-1 mb-md-0">
-                                                                    <input class="form-control" id="inputNadi" name="nadi" type="text" placeholder="Nadi" required/>
+                                                                    <input class="form-control" id="inputNadi" name="nadi" type="number" placeholder="Nadi" required/>
                                                                     <label for="inputNadi">Nadi</label>
                                                                     </div>
                                                                 </div>
@@ -96,6 +96,95 @@ include "header.php";
                                                                     <div class="form-floating mb-1 mb-md-0">
                                                                     <input class="form-control" id="inputBmi" name="bmi" type="text" placeholder="BMI" required/>
                                                                     <label for="inputBmi">BMI</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>      
+                                                </div>
+                                                <div class="card my-2">
+                                                    <h5 class="card-header"><i class="fas fa-microscope"></i> Hasil LAB</h5>
+                                                        <div class="card-body">
+                                                            <div class="row mb-3">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputCol" name="col" type="number" placeholder="Kolesterol" required/>
+                                                                    <label for="inputCol">Kolesterol (<250) </label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-2">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputTrig" name="trig" type="number" placeholder="Trigliserida" required/>
+                                                                    <label for="inputTrig">Trigliserida (<230) </label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputGds" name="gds" type="number" placeholder="GDS" required/>
+                                                                    <label for="inputGds">Gula Darah Sewaktu (GDS <200) </label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-2">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputGdp" name="gdp" type="text" placeholder="GDP" required/>
+                                                                    <label for="inputGdp">GDP 70 - 115</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputAu" name="au" type="text" placeholder="AU" required/>
+                                                                    <label for="inputAu">AU 2.1 - 8.5</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputUr" name="ur" type="text" placeholder="Ur" required/>
+                                                                    <label for="inputUr">Ur (10 - 40)</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputCre" name="cre" type="text" placeholder="Cre" required/>
+                                                                    <label for="inputCre">Cre (0.6 - 1.3)</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputSgot" name="sgot" type="text" placeholder="SGOT" required/>
+                                                                    <label for="inputSgot">SGOT (<40)</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputSgpt" name="sgpt" type="text" placeholder="SGPT" required/>
+                                                                    <label for="inputSgpt">SGPT (<50)</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputHbs" name="hbs" type="text" placeholder="HbsAg" required/>
+                                                                    <label for="inputHbs">HbsAg</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputAnthbs" name="anthbs" type="text" placeholder="AntiHbs" required/>
+                                                                    <label for="inputAnthbs">AntiHbs</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputUrin" name="urin" type="text" placeholder="Urin" required/>
+                                                                    <label for="inputUrin">Urin</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 my-1">
+                                                                    <div class="form-floating">
+                                                                    <input class="form-control" id="inputNar" name="narkoba" type="text" placeholder="Narkoba" required/>
+                                                                    <label for="inputNar">Narkoba</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
