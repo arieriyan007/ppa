@@ -19,6 +19,8 @@ include "header.php";
                         if (isset($_GET['pesan'])) {
                             if ($_GET['pesan']=='sudahlogin') {
                                 echo "<div class='alert alert-warning text-center'><h5><strong>Silahkan logout terlebih dahulu !</strong></h5></div>";
+                         }elseif ($_GET['pesan']=='hapusdata') {
+                            echo "<div class='alert alert-success text-center' role='alert'><strong>Data karyawan telah dihapus !</strong></div>";
                          }
                         }
                         ?>
