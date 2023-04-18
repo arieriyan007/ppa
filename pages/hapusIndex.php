@@ -2,7 +2,7 @@
 include "../koneksi.php";
 
 if (isset($_POST['hapusdata'])) {
-    $idk    = $POST['idk'];
+    $idk    = $_POST['idk'];
 
     $hapus  = mysqli_query($koneksi, "DELETE FROM karyawan WHERE idkaryawan='$idk'");
 

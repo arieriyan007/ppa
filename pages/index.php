@@ -243,13 +243,9 @@ include "header.php";
                                                         Apakah Yakin ingin mengahapus data karyawan <?= $dk['nama']; ?> ?
                                                         <br>
                                                         <input type="hidden" name="idk" value="<?= $idk; ?>">
+                                                        <button type="submit" name="hapusdata" class="btn btn-danger btn-sm my-2" title="Hapus data karyawan" ><i class="fas fa-user-times"></i> Hapus</button>
                                                     </div>
-
-                                                    <!-- Hapus footer -->
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-danger" name="hapusdata" data-bs-dismiss="modal"><i class="fas fa-user-times"></i> Hapus</button>
-                                                    </div>
-                                                    </form>
+                                                  </form>
 
                                                     </div>
                                                 </div>
