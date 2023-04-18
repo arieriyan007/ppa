@@ -9,7 +9,21 @@ include "header.php";
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                         
-                        
+                        <!-- notifikasi masuk -->
+                        <?php 
+                        if (isset($_GET['status'])) {
+                            if ($_GET['status']=='berhasillogin') {
+                                echo "<div class='alert alert-info' role='alert'><marquee><strong><h5> Selamat Datang di aplikasi MCU PT.PPA</h5></strong></marquee></div>";
+                            } 
+                        }
+                        if (isset($_GET['pesan'])) {
+                            if ($_GET['pesan']=='sudahlogin') {
+                                echo "<div class='alert alert-warning text-center'><h5><strong>Silahkan logout terlebih dahulu !</strong></h5></div>";
+                         }
+                        }
+                        ?>
+                        <!-- akhir notofikasi -->
+
                         <div class="card mb-4">
                             <div class="card-header">
                             <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah" title="Tambah data karyawan">
