@@ -98,7 +98,7 @@ include "header.php";
                             
                             </div>
                             <div class="card-body">
-                                
+  
                                 <table id="datatablesSimple" class="table table-bordered table-hover">
                                     <thead>
                                         <tr class="text-center">
@@ -221,8 +221,42 @@ include "header.php";
                                                 </div>
                                                 <!-- akhit edit modal -->
 
-                                               <a href="hapus.php<?= $idk; ?>" class="btn btn-danger btn-sm my-1" title="Hapus Data Karyawan"><i class="fas fa-trash"></i> Hapus</a>
+                                                <!-- botton hapus -->
+                                                <button type="button" class="btn btn-danger btn-sm my-2" data-bs-toggle="modal" data-bs-target="#hapus<?= $idk; ?>" title="Hapus Data Karyawan">
+                                                  <i class="fas fa-trash"></i>  Hapus
+                                                </button>
 
+                                                <!-- The Modal hapus -->
+                                                <div class="modal fade" id="hapus<?= $idk; ?>">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+
+                                                    <!-- Header hapus -->
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Hapus Data Karyawan</h4>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                    </div>
+
+                                                    <!-- Hapus body -->
+                                                    <form action="hapusIndex.php" method="POST">
+                                                    <div class="modal-body">
+                                                        Apakah Yakin ingin mengahapus data karyawan <?= $dk['nama']; ?> ?
+                                                        <br>
+                                                        <input type="hidden" name="idk" value="<?= $idk; ?>">
+                                                    </div>
+
+                                                    <!-- Hapus footer -->
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" name="hapusdata" data-bs-dismiss="modal"><i class="fas fa-user-times"></i> Hapus</button>
+                                                    </div>
+                                                    </form>
+
+                                                    </div>
+                                                </div>
+                                                </div>
+
+
+                                               <!-- akhir botton hapus -->
 
                                             </td>
                                             <td><a href="cekllist.php<?= $idk; ?>" class="btn btn-secondary btn-sm my-2" title="Cetak Ceklist PDF"><i class="far fa-file-pdf"></i> ceklist PDF</a></td>
