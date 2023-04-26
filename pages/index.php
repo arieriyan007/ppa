@@ -171,18 +171,14 @@ include "header.php";
 
                                                     <!-- Modal Header -->
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Edit Data <?= $dk['nama']; ?></h4>
+                                                        <h4 class="modal-title">Edit Data NIK <?= $dk['nik']; ?></h4>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                     </div>
 
                                                     <!-- Modal body -->
                                                     <form action="updateIndex.php" method="POST">
                                                     <div class="modal-body">
-
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input type="text" name="nik" class="form-control my-2" value="<?= $nik; ?>">
-                                                        <label for="inputNik"><strong>NIK Karyawan</strong></label>
-                                                    </div>
+                                                        
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input type="text" name="nama" class="form-control my-2" value="<?= $nama; ?>">
                                                         <label for="inputNama"><strong>Nama Karyawan</strong></label>
@@ -216,7 +212,7 @@ include "header.php";
 
                                                     <!-- Modal footer -->
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-primary" name="udpate"><i class="fas fa-user-edit"></i> Update</button>
+                                                        <button type="button" class="btn btn-primary" name="updatedata"><i class="fas fa-user-edit"></i> Update</button>
                                                     </div>
                                                     </form>
 
