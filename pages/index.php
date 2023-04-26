@@ -178,13 +178,14 @@ include "header.php";
                                                     <!-- Modal body -->
                                                     <form action="updateIndex.php" method="POST">
                                                     <div class="modal-body">
-                                                        
+
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input type="text" name="nama" class="form-control my-2" value="<?= $nama; ?>">
                                                         <label for="inputNama"><strong>Nama Karyawan</strong></label>
+                                                        <input type="hidden" name="idk" value="<?= $idk; ?>">
                                                     </div>
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input type="date" name="tglllahir" class="form-control my-2" value="<?= $tgllahir; ?>">
+                                                        <input type="date" name="tgllahir" class="form-control my-2" value="<?= $tgllahir; ?>">
                                                         <label for="inputTgllahir"><strong>Tgl Lahir</strong></label>
                                                     </div>
                                                     <div class="form-floating mb-3 mb-md-0">
@@ -212,7 +213,7 @@ include "header.php";
 
                                                     <!-- Modal footer -->
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-primary" name="updatedata"><i class="fas fa-user-edit"></i> Update</button>
+                                                        <button type="submit" class="btn btn-primary" name="updatedata"><i class="fas fa-user-edit"></i> Update</button>
                                                     </div>
                                                     </form>
 
