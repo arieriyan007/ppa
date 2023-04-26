@@ -68,7 +68,7 @@ include "header.php";
                                             ?>
                                             <form action="" method="POSt">
                                                 <div class="card">
-                                                    <h5 class="card-header"><i class="fas fa-file-medical"></i> Keadaan Fisik</h5>
+                                                    <h5 class="card-header"><i class="fas fa-file-medical"></i> Keadaan Umum</h5>
                                                         <div class="card-body">
                                                             <div class="row mb-3">
                                                                 <div class="col-md-4">
@@ -190,6 +190,106 @@ include "header.php";
                                                             </div>
                                                         </div>      
                                                 </div>
+                                                <div class="card my-2">
+                                                    <h5 class="card-header"><i class="fas fa-radiation"></i> Hasil Radiologi</h5>
+                                                        <div class="card-body">
+                                                            <div class="row mb-3">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputRon" name="ron" type="text" placeholder="Rontgen" required/>
+                                                                    <label for="inputRon">Rontgen </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>      
+                                                </div>
+                                                <div class="card my-2">
+                                                    <h5 class="card-header"><i class="fas fa-laptop-medical"></i> Catatan Fisik</h5>
+                                                        <div class="card-body">
+                                                            <div class="row mb-3">
+                                                                <div class="col-md-4 my-1">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputEkg" name="ekg" type="text" placeholder="EKG" required/>
+                                                                    <label for="inputEkg">EKG </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 my-1">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputFisik" name="fisik" type="text" placeholder="Fisik" required/>
+                                                                    <label for="inputFisik">Fisik </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 my-1">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputBW" name="bw" type="text" placeholder="Buta Warna" required/>
+                                                                    <label for="inputBW">Buta Warna </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 my-1">
+                                                                    <div class="form-floating mb-1 mb-md-0">
+                                                                    <input class="form-control" id="inputSpiro" name="spiro" type="text" placeholder="Spirometry" required/>
+                                                                    <label for="inputSpiro">Spirometry </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>      
+                                                </div>
+                                                <div class="card my-2">
+                                                    <h5 class="card-header"><i class="fas fa-file-medical"></i> Audiometry</h5>
+                                                        <div class="card-body">
+                                                            <div class="row mb-3">
+                                                        
+                                                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                                                <div class="col">
+                                                                    <div class="card">
+                                                                        <div class="text-center my-3"><h5><strong>ACR</strong></h5></div>
+                                                                            <div class="card-body">
+                                                                                    <div class="form-floating mb-1">
+                                                                                        <input class="form-control" id="inputAcr500" name="acr500" type="number" placeholder="500" required/>
+                                                                                        <label for="inputAcr500">500 </label>
+                                                                                     </div>
+                                                                                    <div class="form-floating my-1">
+                                                                                        <input class="form-control" id="inputAcr2000" name="acr2000" type="number" placeholder="2000" required/>
+                                                                                        <label for="inputAcr2000">2000 </label>
+                                                                                    </div>
+                                                                                    <div class="form-floating my-1">
+                                                                                        <input class="form-control" id="inputAcr4000" name="acr4000" type="number" placeholder="4000" required/>
+                                                                                        <label for="inputAcr4000">4000 </label>
+                                                                                    </div>
+                                                                                    <div class="form-floating my-1">
+                                                                                        <input class="form-control" id="inputAcr8000" name="acr8000" type="number" placeholder="8000" required/>
+                                                                                        <label for="inputAcr8000">8000 </label>
+                                                                                    </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                <div class="col">
+                                                                    <div class="card">
+                                                                        <div class="text-center my-3"><h5><strong>ACL</strong></h5></div>
+                                                                            <div class="card-body">
+                                                                            <div class="form-floating mb-1">
+                                                                                        <input class="form-control" id="inputAcl500" name="acl500" type="number" placeholder="500" required/>
+                                                                                        <label for="inputAcl500">500 </label>
+                                                                                     </div>
+                                                                                    <div class="form-floating my-1">
+                                                                                        <input class="form-control" id="inputAcl2000" name="acl2000" type="number" placeholder="2000" required/>
+                                                                                        <label for="inputAcl2000">2000 </label>
+                                                                                    </div>
+                                                                                    <div class="form-floating my-1">
+                                                                                        <input class="form-control" id="inputAcl4000" name="acl4000" type="number" placeholder="4000" required/>
+                                                                                        <label for="inputAcl4000">4000 </label>
+                                                                                    </div>
+                                                                                    <div class="form-floating my-1">
+                                                                                        <input class="form-control" id="inputAcl8000" name="acr8000" type="number" placeholder="8000" required/>
+                                                                                        <label for="inputAcl8000">8000 </label>
+                                                                                    </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                            </div>
+                                                            
+                                                            </div>      
+                                                        </div>
 
                                             <div class="mt-4 mb-0">
                                                 <div><button type="submit" name="simpanass" class="btn btn-primary btn-sm" title="Simpan Hasil MCU" ><i class="fas fa-save"></i> Simpan</button></div>
